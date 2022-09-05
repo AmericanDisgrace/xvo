@@ -81,9 +81,9 @@ end
 user.OnTeleport:Connect(function(State)
 	if State == Enum.TeleportState.Started then
 		if syn then
-			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/AmericanDisgrace/xvo/master/Raise%20a%20Peter.lua"))()')
+			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/AmericanDisgrace/xvo/master/scripts/Raise%20a%20Peter.lua"))()')
 		elseif queue_on_teleport then
-			queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/AmericanDisgrace/xvo/master/Raise%20a%20Peter.lua"))()')
+			queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/AmericanDisgrace/xvo/master/scripts/Raise%20a%20Peter.lua"))()')
 		else
 			notify("[queue_on_teleport Not Supported] Some features may not work as intended.", 8)
 		end
