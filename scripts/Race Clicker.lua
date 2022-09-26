@@ -60,7 +60,7 @@ spawn(function()
 				repeat wait() until char():FindFirstChild("HumanoidRootPart")
 				wait(1)
 				repeat wait() until char():FindFirstChild("HumanoidRootPart")
-				char().HumanoidRootPart.CFrame = CFrame.new(Vector3.new(workspace.Lobby.SpawnLocation.SpawnLocation.Position))
+				char().HumanoidRootPart.CFrame = CFrame.new(Vector3.new(workspace.LoadedWorld.WorldMain.SpawnLocation.SpawnLocation.CFrame))
 				wait(29)
 				count = 0
 			end
@@ -89,7 +89,7 @@ MainSec:AddToggle({
 		winFarm = value
 		if not value then
 			repeat wait() until char():FindFirstChild("HumanoidRootPart")
-			char().HumanoidRootPart.CFrame = CFrame.new(Vector3.new(workspace.Lobby.SpawnLocation.SpawnLocation.Position))
+			char().HumanoidRootPart.CFrame = CFrame.new(Vector3.new(workspace.LoadedWorld.WorldMain.SpawnLocation.SpawnLocation.CFrame))
 		end
 	end
 })
