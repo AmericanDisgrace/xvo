@@ -32,37 +32,15 @@ local function notify(text, time)
 end
 
 --> win farm
-local function getWins()
-	for _,v in pairs(user.leaderstats:GetChildren()) do
-		if v.Name:sub(5,8) == "Wins" then
-			return v.Value
-		end
-	end
-end
-
 spawn(function()
 	while wait() and GuiActive do
 		if winFarm then
-			local wins = getWins()
-			for _,v in pairs(workspace.Environment:GetChildren()) do
+			for _,v in pairs(workspace.StageColliders:GetChildren()) do
 				spawn(function()
 					firetouchinterest(v.Sign, char().HumanoidRootPart, 1)
 					wait()
 					firetouchinterest(v.Sign, char().HumanoidRootPart, 0)
 				end)
-			end
-			if wins == getWins() then
-				count = count + 1
-			else
-				count = 0
-			end
-			if count >= 50 then
-				repeat wait() until char():FindFirstChild("HumanoidRootPart")
-				wait(1)
-				repeat wait() until char():FindFirstChild("HumanoidRootPart")
-				char().HumanoidRootPart.CFrame = CFrame.new(Vector3.new(workspace.LoadedWorld.WorldMain.SpawnLocation.SpawnLocation.CFrame))
-				wait(29)
-				count = 0
 			end
 		end
 	end
@@ -87,10 +65,6 @@ MainSec:AddToggle({
 	Default = winFarm,
 	Callback = function(value)
 		winFarm = value
-		if not value then
-			repeat wait() until char():FindFirstChild("HumanoidRootPart")
-			char().HumanoidRootPart.CFrame = CFrame.new(Vector3.new(workspace.LoadedWorld.WorldMain.SpawnLocation.SpawnLocation.CFrame))
-		end
 	end
 })
 
