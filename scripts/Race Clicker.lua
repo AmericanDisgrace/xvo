@@ -8,7 +8,7 @@ if not game:IsLoaded() then
 end
 
 if game.PlaceId ~= 9285238704 then
-	game:GetService("Players").LocalPlayer:Kick('Executed script intended to run on "Race Clicker".') end
+	game:GetService("Players").LocalPlayer:Kick('Executed script intended to run on "Race Clicker".')
 end
 
 --> variables
