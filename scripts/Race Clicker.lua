@@ -37,9 +37,9 @@ spawn(function()
 		if winFarm then
 			for _,v in pairs(workspace.StageColliders:GetChildren()) do
 				spawn(function()
-					firetouchinterest(v.Sign, char().HumanoidRootPart, 1)
+					firetouchinterest(v, char().HumanoidRootPart, 1)
 					wait()
-					firetouchinterest(v.Sign, char().HumanoidRootPart, 0)
+					firetouchinterest(v, char().HumanoidRootPart, 0)
 				end)
 			end
 		end
